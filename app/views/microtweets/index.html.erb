@@ -1,0 +1,7 @@
+<% if flash[:error] %>
+  <div class="alert alert-info" role="alert"><%= flash[:error] %></div>
+<% end %>
+<hr>
+<%= render 'form' %>
+<hr>
+<%= render 'tweets' %>
