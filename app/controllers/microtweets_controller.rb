@@ -6,7 +6,7 @@ class MicrotweetsController < ApplicationController
     if params[:handle]
       begin
         flash.clear
-        @tweets = TwitterAdapter.find_tweets_for(params[:handle])
+        @tweets = ::TwitterAdapter.find_tweets_for(params[:handle])
       rescue Twitter::Error::NotFound
         flash[:error] = "Twitter account does not exist!"
         render :index
